@@ -31,12 +31,20 @@ Generated artificial MRI images of different contrast levels from existing MRI s
 
 ### Project Contents
 * **Style Transfer using GAN.ipynb** - Jupyter Notebook for Capstone - Style Transfer using GAN (Language : Python)
-* **cyclegan-mri.gif** - A Gif file of CycleGAN predicted output per Epoch.
+* **cyclegan-mri.gif** - A Gif file of CycleGAN predicted output per Epoch
+* **predicted.jpg** - JPEG image of translated images
+* **model.png** - PNG image of model designed for Discriminator
 * **README.md** - Readme file
 
 
 ### Conclusion
-CycleGAN was trained to translate T1 and T2 image to T2 and T1 image respectively. The model was trained for 250 epochs using U-net architecture.
+CycleGAN was trained to translate T1 and T2 image to T2 and T1 image respectively. The model was trained for **250 epochs** using U-net architecture.
+
+#### Training Progress per Epoch
+<center><img src="cyclegan-mri.gif" alt="drawing" width="800"  /></center>
+
+#### Predicted Images
+<center><img src="predicted.jpg" alt="drawing" width="800"  /></center>
 
 #### Recommendation
 Model successfully generates authentic MRI image from given input image.
