@@ -1,4 +1,4 @@
-# Generating artificial MRI images using CycleGAN
+# Style-Transfer-using-GAN
 A Capstone Project to build a Generative adversarial model(modified U-Net) which can generate artificial MRI images of different contrast levels from existing MRI scans.
 
 ## Table of Contents
