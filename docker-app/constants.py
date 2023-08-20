@@ -1,0 +1,4 @@
+IMG_WIDTH = 128
+IMG_HEIGHT = 128
+MODEL_G_NAME = 'model_g.h5'
+MODEL_F_NAME = 'model_f.h5'
