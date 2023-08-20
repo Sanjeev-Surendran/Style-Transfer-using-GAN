@@ -5,6 +5,7 @@ A Capstone Project to build a Generative adversarial model(modified U-Net) which
 * [General Info](#general-information)
 * [Project Contents](#project-contents)
 * [Conclusion](#conclusion)
+* [Docker](#docker)
 * [Software and Library Versions](#software-and-library-versions)
 * [Acknowledgements](#acknowledgements)
 
@@ -30,11 +31,22 @@ Generated artificial MRI images of different contrast levels from existing MRI s
 
 
 ### Project Contents
-* **Style Transfer using GAN.ipynb** - Jupyter Notebook for Capstone - Style Transfer using GAN (Language : Python)
+* **docker-app** - Folder containing files to support docker deployment
+    * **app.py** - Python file to launch Streamlit APP
+    * **constants.py** - Python file for constant values
+    * **utils.py** - Main Python file for model processing
+    * **requirements.txt** - Python Libraries to be installed
+    * **model_g.h5** - H5 model file of Generator G in CycleGAN
+    * **model_f.h5** - H5 model file of Generator F in CycleGAN
+* **Style_Transfer_using_GAN.ipynb** - Jupyter Notebook for Capstone - Style Transfer using GAN (Language : Python)
 * **cyclegan-mri.gif** - A Gif file of CycleGAN predicted output per Epoch
 * **predicted.jpg** - JPEG image of translated images
-* **model.png** - PNG image of model designed for Discriminator
+* **discriminator_model.png** - PNG image of model designed for Discriminator
+* **generator_model.png** - PNG image of model designed for Generator
+* **Dockerfile** - File for building docker images and running it in container
+* **streamlit-app.png** - Web page view of Streamlit APP
 * **README.md** - Readme file
+* **.gitattributes** - Attribute files to track large files
 
 
 ### Conclusion
@@ -53,6 +65,25 @@ Model successfully generates authentic MRI image from given input image.
 * Discriminator X Loss : **0.54**
 * Discriminator Y Loss : **0.30**
 
+### Docker
+This Capstone project supports docker image deployment. The docker image builds and runs a Streamlit app.
+user can upload MRI image in Streamlit app and the app displays T1 and T2 generated images.
+`Note: User must have installed docker and must be signed-in'
+
+#### Build Docker Image
+Run following command to build docker image
+`docker build -t genrate_mri_image .`
+
+#### Run Docker Container
+Run following command to run docker container
+`docker run -d --name mricontainer -p 80:8501 genrate_mri_image`
+
+#### View Streamlit App
+Click below link to open Steamlit app once container is running docker image.
+`http://127.0.0.1/`
+
+#### Web Page
+<center><img src="streamlit-app.png" alt="drawing" width="800"  /></center>
 
 ### Software and Library Versions
 * ![Jupyter Notebook](https://img.shields.io/static/v1?label=Jupyter%20Notebook&message=6.5.5&color=blue&labelColor=grey)
