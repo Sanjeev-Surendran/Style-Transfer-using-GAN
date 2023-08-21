@@ -60,27 +60,27 @@ CycleGAN was trained to translate T1 and T2 image to T2 and T1 image respectivel
 
 #### Recommendation
 Model successfully generates authentic MRI image from given input image.
-* Generator G Loss : **2.93**
-* Generator F Loss : **2.27**
-* Discriminator X Loss : **0.54**
-* Discriminator Y Loss : **0.30**
+* Generator G Loss : **3.36**
+* Generator F Loss : **7.64**
+* Discriminator X Loss : **0.03**
+* Discriminator Y Loss : **0.28**
 
 ### Docker
-This Capstone project supports docker image deployment. The docker image builds and runs a Streamlit app.
-user can upload MRI image in Streamlit app and the app displays T1 and T2 generated images.
+This Capstone project supports docker image deployment. The docker image builds and runs a Streamlit app.<br>
+User can upload MRI image in Streamlit app and the app displays T1 and T2 generated images.<br>
 `Note: User must have installed docker and must be signed-in'
 
 #### Build Docker Image
-Run following command to build docker image
+Run the following command to build docker image<br>
 `docker build -t genrate_mri_image .`
 
 #### Run Docker Container
-Run following command to run docker container
+Run the following command to run docker container<br>
 `docker run -d --name mricontainer -p 80:8501 genrate_mri_image`
 
 #### View Streamlit App
-Click below link to open Steamlit app once container is running docker image.
-`http://127.0.0.1/`
+Click the below link to open Steamlit app once container is running docker image<br>
+http://127.0.0.1/
 
 #### Web Page
 <center><img src="streamlit-app.png" alt="drawing" width="800"  /></center>

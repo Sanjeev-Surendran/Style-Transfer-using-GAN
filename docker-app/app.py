@@ -17,15 +17,15 @@ def main():
         image = load_img(uploaded_file)
         
         with tab1:
-            # Display image
-            st.image(image, caption="Uploaded Image", use_column_width=True)
+            # Display image with width 512
+            st.image(image, caption="Uploaded Image", width=512)
             t1_image, t2_image = generate_image(uploaded_file)
         with tab2:
-            # Display image
-            st.image(t1_image, caption="T1 Image", use_column_width=True)
+            # Display image with width 512
+            st.image(t1_image, caption="T1 Image", width=512)
         with tab3:
-            # Display image
-            st.image(t2_image, caption="T2 Image", use_column_width=True)
+            # Display image with width 512
+            st.image(t2_image, caption="T2 Image", width=512)
 
 if __name__ == "__main__":
     main()
